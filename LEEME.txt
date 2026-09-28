@@ -1,0 +1,47 @@
+OPTIMIZADOR WINDOWS 10 - 4 GB DE RAM  (v2.0)
+============================================
+
+USO
+  Ejecutar Optimizador-W10.exe (o Iniciar.bat) y aceptar permisos de administrador.
+  Aparece un menu:
+    [1] Optimizacion completa (recomendada)
+    [2] Solo limpieza de disco
+    [3] Diagnostico: que consume memoria, programas de inicio, recomendaciones
+    [4] Revertir todos los cambios
+  Reiniciar el equipo al terminar.
+
+  Modo sin preguntas:  Iniciar.bat -Auto
+  Deshacer:            Revertir.bat
+
+QUE HACE
+  - Detecta solo: RAM, tipo de disco (HDD/SSD), si es portatil, espacio libre.
+  - Crea un punto de restauracion y ademas un respaldo exacto de cada valor
+    que modifica (%ProgramData%\OptimizadorW10\respaldo.json).
+  - Limpieza: temporales de todos los usuarios, cache de Windows Update,
+    Liberador de espacio de Windows (actualizaciones viejas, miniaturas,
+    informes de errores). Muestra cuanto espacio se libero.
+  - Plan "Alto rendimiento" (en portatiles pregunta antes).
+  - Efectos visuales en modo rendimiento, conservando el texto suavizado.
+  - Desactiva apps en segundo plano, anuncios/sugerencias y Game Bar.
+  - Evita que Edge quede cargado en memoria con la ventana cerrada (pregunta).
+  - Desactiva telemetria (DiagTrack) y las tareas que suelen poner el
+    disco al 100% (Compatibility Appraiser / CompatTelRunner).
+  - Memoria: reactiva el archivo de paginacion si estaba apagado y activa
+    la compresion de memoria (lo mas util con 4 GB).
+  - Solo en discos HDD: ofrece desactivar la indexacion de busqueda.
+  - Lista los programas de inicio y abre el Administrador de tareas.
+  - Registro completo en el Escritorio: optimizador_log.txt
+
+QUE NO HACE
+  No desactiva Windows Update, Windows Defender ni el firewall.
+  No desactiva SysMain por defecto: es necesario para la compresion de memoria.
+
+NOTAS
+  - SmartScreen puede advertir al abrir el .exe porque no esta firmado:
+    "Mas informacion" > "Ejecutar de todas formas".
+  - Si la cuenta no es administradora y se usa otra cuenta para autorizar,
+    los ajustes visuales se aplican a esa otra cuenta. Conviene ejecutarlo
+    desde una cuenta de administrador.
+
+LA MEJORA MAS GRANDE
+  Cambiar el disco HDD por un SSD, y en segundo lugar ampliar a 8 GB de RAM.
